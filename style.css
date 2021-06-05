@@ -5,15 +5,15 @@ body{
     background-color: rgba(226, 226, 226, 0.775);
 }
 a{
-    color: rgba(0, 0, 0, 0.679);
+    color: rgba(0, 0, 0, 0.474);
     text-decoration: none;
+}
+a:hover{
+    color:black;
 }
 
 .nav-bar{
     background-color: rgba(247, 247, 247, 0.665);
-}
-.btn{
-    margin-right: 0px;
 }
 .fa-bars{
     width: 50px;
