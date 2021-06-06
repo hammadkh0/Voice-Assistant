@@ -19,11 +19,9 @@
             <div class="flex-container">
                 <i class="fas fa-bars fa-lg"></i>
 
-                <a class="navbar-brand" href="#" onmouseover="PlaySound('sound9')" onmouseout="StopSound('sound9')">VOICE ASSISTANT</a>
-                <audio src="Audio/sus.mp3" id="sound9" preload="auto"></audio>
+                <a class="navbar-brand" href="#" onmouseover="PlaySound('soundSus')" onmouseout="StopSound('soundSus')">VOICE ASSISTANT</a>
 
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onmouseover="PlaySound('sound8')" onmouseout="StopSound('sound8')">Sign Out</button>
-                <audio src="Audio/Sign-Out.mp3" id="sound8" preload="auto"></audio>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onmouseover="PlaySound('soundSout')" onmouseout="StopSound('soundSout')">Sign Out</button>
             </div>
         </nav>
 
@@ -32,10 +30,9 @@
         <div class="row">
             <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  PHONE  -->
                 <div class="grid-item" id="g1">
-                    <a href="#" class="icon-link"  onmouseover="PlaySound('sound1')" onmouseout="StopSound('sound1')">
+                    <a href="#" class="icon-link"  onmouseover="PlaySound('soundPhn')" onmouseout="StopSound('soundPhn')">
                         <i class="fas fa-phone-alt fa-2x"></i>
                     </a>
-                    <audio src="Audio/contacts_en_us_1.mp3" id="sound1" preload="auto"></audio>
                 </div>
             </div>
 
@@ -43,8 +40,7 @@
 
             <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  MESSAGE  -->
                 <div class="grid-item" id="g2">
-                    <audio src="Audio/messages_en_us_1.mp3" id="sound2" preload="auto"></audio>
-                    <a href="#" class="icon-link"  onmouseover="PlaySound('sound2')" onmouseout="StopSound('sound2')">
+                    <a href="#" class="icon-link"  onmouseover="PlaySound('soundMsg')" onmouseout="StopSound('soundMsg')">
                         <i class="far fa-comment-alt fa-2x"></i>
                     </a>
                 </div>
@@ -54,10 +50,9 @@
 
             <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  SEARCH BROWSER  -->
                 <div class="grid-item" id="g3">
-                    <a href="#" class="icon-link" onmouseover="PlaySound('sound3')" onmouseout="StopSound('sound3')" >
+                    <a href="#" class="icon-link" onmouseover="PlaySound('soundBrws')" onmouseout="StopSound('soundBrws')" >
                         <i class="fas fa-search fa-2x"></i>
                     </a>
-                    <audio src="Audio/browser_en_us_1.mp3" id="sound3" preload="auto"></audio>
                 </div>
             </div>
 
@@ -65,8 +60,7 @@
            
             <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  BATTERY  -->
                 <div class="grid-item" id="g5">
-                    <audio src="Audio/battery_en_us_1.mp3" id="sound4" preload="auto"></audio>
-                    <a href="#" class="icon-link" onmouseover="PlaySound('sound4')" onmouseout="StopSound('sound4')">
+                    <a href="#" class="icon-link" onmouseover="PlaySound('soundBatt')" onmouseout="StopSound('soundBatt')">
                         <i class="fas fa-battery-three-quarters fa-2x"></i>
                     </a>
                 </div>
@@ -76,10 +70,9 @@
 
             <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  NAVIGATION  -->
                 <div class="grid-item" id="g6">
-                    <a href="#" class="icon-link" onmouseover="PlaySound('sound5')" onmouseout="StopSound('sound5')">
+                    <a href="#" class="icon-link" onmouseover="PlaySound('soundNavg')" onmouseout="StopSound('soundNavg')">
                         <i class="fas fa-map-marker-alt fa-2x"></i>
                     </a>
-                    <audio src="Audio/navigation_en_us_1.mp3" id="sound5" preload="auto"></audio>
                 </div>
             </div>
 
@@ -87,10 +80,9 @@
 
             <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  NOTES  -->
                 <div class="grid-item" id="g7">
-                    <a href="#" class="icon-link" onmouseover="PlaySound('sound6')" onmouseout="StopSound('sound6')"> 
+                    <a href="#" class="icon-link" onmouseover="PlaySound('soundNote')" onmouseout="StopSound('soundNote')"> 
                         <i class="far fa-clipboard fa-2x"></i>
                     </a>
-                    <audio src="Audio/notes_en_us_1.mp3" id="sound6" preload="auto"></audio>
                 </div>
             </div>
             
@@ -103,8 +95,7 @@
 
             <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  MICROPHONE  -->
                 <div class="grid-item" id="g4">
-                    <audio src="Audio/microphone_en_us_1.mp3" id="sound7" preload="auto"></audio>
-                    <a href="#" class="icon-link" onmouseover="PlaySound('sound7')" onmouseout="StopSound('sound7')">
+                    <a href="#" class="icon-link" onmouseover="PlaySound('soundMic')" onmouseout="StopSound('soundMic')">
                         <i class="fas fa-microphone fa-2x"></i>
                     </a>
                 </div>
@@ -113,11 +104,20 @@
             <div class="col-lg-4 col-sm-4 col-xs-4">
                 <div class="grid-item" id="g"></div>
             </div>
-
-
             
         </div>
     </div>
+
+
+    <audio src="Audio/sus.mp3" id="soundSus" preload="auto"></audio>
+    <audio src="Audio/Sign-Out.mp3" id="soundSout" preload="auto"></audio>
+    <audio src="Audio/contacts_en_us_1.mp3" id="soundPhn" preload="auto"></audio>
+    <audio src="Audio/messages_en_us_1.mp3" id="soundMsg" preload="auto"></audio>
+    <audio src="Audio/browser_en_us_1.mp3" id="soundBrws" preload="auto"></audio>
+    <audio src="Audio/battery_en_us_1.mp3" id="soundBatt" preload="auto"></audio>
+    <audio src="Audio/navigation_en_us_1.mp3" id="soundNavg" preload="auto"></audio>
+    <audio src="Audio/notes_en_us_1.mp3" id="soundNote" preload="auto"></audio>
+    <audio src="Audio/microphone_en_us_1.mp3" id="soundMic" preload="auto"></audio>
    
     <script src="sounds.js"></script>
 </body>
