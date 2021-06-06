@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/70795afb75.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Home Screen</title>
+</head>
+<body>
+
+        <nav class="nav-bar">
+            <div class="flex-container">
+                <i class="fas fa-bars fa-lg"></i>
+
+                <a class="navbar-brand" href="#" onmouseover="PlaySound('sound9')" onmouseout="StopSound('sound9')">VOICE ASSISTANT</a>
+                <audio src="Audio/sus.mp3" id="sound9" preload="auto"></audio>
+
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onmouseover="PlaySound('sound8')" onmouseout="StopSound('sound8')">Sign Out</button>
+                <audio src="Audio/Sign-Out.mp3" id="sound8" preload="auto"></audio>
+            </div>
+        </nav>
+
+
+     <div class="container" style="margin-top: 2rem;">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  PHONE  -->
+                <div class="grid-item" id="g1">
+                    <a href="#" class="icon-link"  onmouseover="PlaySound('sound1')" onmouseout="StopSound('sound1')">
+                        <i class="fas fa-phone-alt fa-2x"></i>
+                    </a>
+                    <audio src="Audio/contacts_en_us_1.mp3" id="sound1" preload="auto"></audio>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  MESSAGE  -->
+                <div class="grid-item" id="g2">
+                    <audio src="Audio/messages_en_us_1.mp3" id="sound2" preload="auto"></audio>
+                    <a href="#" class="icon-link"  onmouseover="PlaySound('sound2')" onmouseout="StopSound('sound2')">
+                        <i class="far fa-comment-alt fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  SEARCH BROWSER  -->
+                <div class="grid-item" id="g3">
+                    <a href="#" class="icon-link" onmouseover="PlaySound('sound3')" onmouseout="StopSound('sound3')" >
+                        <i class="fas fa-search fa-2x"></i>
+                    </a>
+                    <audio src="Audio/browser_en_us_1.mp3" id="sound3" preload="auto"></audio>
+                </div>
+            </div>
+
+
+           
+            <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  BATTERY  -->
+                <div class="grid-item" id="g5">
+                    <audio src="Audio/battery_en_us_1.mp3" id="sound4" preload="auto"></audio>
+                    <a href="#" class="icon-link" onmouseover="PlaySound('sound4')" onmouseout="StopSound('sound4')">
+                        <i class="fas fa-battery-three-quarters fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  NAVIGATION  -->
+                <div class="grid-item" id="g6">
+                    <a href="#" class="icon-link" onmouseover="PlaySound('sound5')" onmouseout="StopSound('sound5')">
+                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                    </a>
+                    <audio src="Audio/navigation_en_us_1.mp3" id="sound5" preload="auto"></audio>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  NOTES  -->
+                <div class="grid-item" id="g7">
+                    <a href="#" class="icon-link" onmouseover="PlaySound('sound6')" onmouseout="StopSound('sound6')"> 
+                        <i class="far fa-clipboard fa-2x"></i>
+                    </a>
+                    <audio src="Audio/notes_en_us_1.mp3" id="sound6" preload="auto"></audio>
+                </div>
+            </div>
+            
+
+            
+
+            <div class="col-lg-4 col-sm-4 col-xs-4">
+                <div class="grid-item" id="g"></div>
+            </div>
+
+            <div class="col-lg-4 col-sm-4 col-xs-4">    <!--  MICROPHONE  -->
+                <div class="grid-item" id="g4">
+                    <audio src="Audio/microphone_en_us_1.mp3" id="sound7" preload="auto"></audio>
+                    <a href="#" class="icon-link" onmouseover="PlaySound('sound7')" onmouseout="StopSound('sound7')">
+                        <i class="fas fa-microphone fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-4 col-xs-4">
+                <div class="grid-item" id="g"></div>
+            </div>
+
+
+            
+        </div>
+    </div>
+   
+    <script src="sounds.js"></script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</html>
