@@ -23,7 +23,7 @@ document.querySelector(".show-password").addEventListener("click",function(){
 });
 
 function getInfo(){
-    if (fields[0].value == "testboi" && fields[1].value == "test123") {
+    if (fields[0].value == "hammad" && fields[1].value == "hammad123") {
         alert("Login Successful")
         window.location.href = "homeScreen.html";
     }
