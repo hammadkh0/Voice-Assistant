@@ -3,8 +3,8 @@ var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
 
-var colors = ['sign out','navigation'];
-var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
+var audioCommands = ['sign out','navigation','hamood'];
+var grammar = '#JSGF V1.0; grammar audioCommands; public <audioCommands> = ' + audioCommands.join(' | ') + ' ;'
 
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
@@ -21,8 +21,7 @@ const div = document.querySelector('#g4')
 mic.onclick = function speech (){
     PlaySound('soundList')
     recognition.start()
-    console.log("Ready to Start boiizz")
-
+    return false
 }
 
 recognition.onresult = function(event){
@@ -30,16 +29,18 @@ recognition.onresult = function(event){
 
     alert(voice)
 
-    colors.forEach(function(e){
-        if(voice == 'sign out'){
+    audioCommands.forEach(function(e){
+        if(voice == audioCommands[0]){
             window.location.href = "index.html";
         }
-        else if(voice == e){
-            alert("Matched")
+        else if(voice == audioCommands[2]){
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+        else if(voice === e){
             window.location.href = `${voice}.html`;
         }
+        
     });
-
 }
 
 recognition.onspeechend = function() {

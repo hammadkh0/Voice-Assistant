@@ -25,7 +25,7 @@ i{
 }
 .fa-bars{
     width: 50px;
-    size: 100px;
+ 
 }
 .grid-item{
     position: relative;
@@ -132,9 +132,21 @@ i{
     border-radius: 10px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+
+    .flex-container{
+        align-items: center;
+    }
     .grid-item{
         margin: 20px;
         align-items: center;
+    }
+    a:not(:first-child){
+        padding: 0rem 2rem;
+
+    }
+    .fa-bars{
+        width: 50   px;
+        padding-bottom: 12px;
     }
 }

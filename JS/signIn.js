@@ -1,4 +1,4 @@
-var fields = document.querySelectorAll(".textb input");
+var fields = document.querySelectorAll(".textb input"); //create field array[]
 var btn = document.querySelector(".btn");
 function check(){
   if(fields[0].value != "" && fields[1].value != "")
@@ -24,7 +24,6 @@ document.querySelector(".show-password").addEventListener("click",function(){
 
 function getInfo(){
     if (fields[0].value == "hammad" && fields[1].value == "hammad123") {
-        alert("Login Successful")
         window.location.href = "homeScreen.html";
     }
     else {

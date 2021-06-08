@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation</title>
-</head>
-<body>
-    <h1>Google Nigga
+<html>
+    <head>
+        <title>searchbyaddressHTML</title>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+
+        <style type='text/css'>body{margin:0;padding:0;overflow:hidden;font-family:'Segoe UI',Helvetica,Arial,Sans-Serif}</style>
+        <link rel="stylesheet" href="/CSS/navig.css">
+
+        <script src="https://kit.fontawesome.com/70795afb75.js" crossorigin="anonymous"></script>
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=ArGTEcSiJxp1smA3VXDt8JdwWGaLMB1ouuYH32meyDalTuXWPD8fegH3QvZreqiZ&callback=loadMapScenario' async defer></script>
+       
+
+    </head>
+    <body>
+    
+    
+        <div class="main">
+            <div class="maps-section">
+                <!-- <div id='printoutPanel'></div> -->
         
-    </h1>
-</body>
+                <div id='myMap'></div>
+        
+        
+                <div class="grid-item" id="g4">
+                    <a href="#" class="icon-link mic" onmouseover="PlaySound('soundMic')" onmouseout="StopSound('soundMic')" />
+                    <i class="fas fa-microphone fa-2x" ></i>
+                </a>
+                </div>
+
+
+            </div>
+            
+            <div class="text-section">
+                <div class="result-text">
+                    <h1 id="result"></h1>
+                </div>
+
+            </div>
+        </div>
+    
+
+       
+
+        <audio src="Audio/microphone_en_us_1.mp3" id="soundMic" preload="auto"></audio>
+        <audio src="Audio/listening_en_us_1.mp3" id="soundList" preload="auto"></audio>
+
+        <script type="text/javascript" src="/JS/Maps.js"></script>
+        <!-- <script src="Speech.js"></script> -->
+        <script src="/JS/sounds.js"></script>
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=TG5b3JGw"></script>
+    </body>
 </html>
