@@ -3,7 +3,7 @@ var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
 
-var audioCommands = ['sign out','navigation','hamood'];
+var audioCommands = ['sign out','navigation'];
 var grammar = '#JSGF V1.0; grammar audioCommands; public <audioCommands> = ' + audioCommands.join(' | ') + ' ;'
 
 var recognition = new SpeechRecognition();
@@ -16,7 +16,11 @@ recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
 const mic = document.querySelector('.mic')
-const div = document.querySelector('#g4')
+const nav = document.querySelector('#g6')
+
+nav.onclick = function(){
+    window.location.href = "navigation.html"
+}
 
 mic.onclick = function speech (){
     PlaySound('soundList')
@@ -33,9 +37,7 @@ recognition.onresult = function(event){
         if(voice == audioCommands[0]){
             window.location.href = "index.html";
         }
-        else if(voice == audioCommands[2]){
-            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        }
+       
         else if(voice === e){
             window.location.href = `${voice}.html`;
         }
