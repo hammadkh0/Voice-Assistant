@@ -53,10 +53,11 @@ function loadMapScenario(_result) {
 
     var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
         /* No need to set credentials if already passed in URL */
-        center: new Microsoft.Maps.Location(47.624527, -122.355255),
+        center: new Microsoft.Maps.Location(67.624527, -102.355255),
         zoom: 8,
         showSearchBar: true,
     });
+    console.log(map._options.center.latitude)
     Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
         var searchManager = new Microsoft.Maps.Search.SearchManager(map);
         var requestOptions = {
@@ -65,15 +66,17 @@ function loadMapScenario(_result) {
             callback: function (answer, userData) {
                 map.setView({ bounds: answer.results[0].bestView });
                 map.entities.push(new Microsoft.Maps.Pushpin(answer.results[0].location));
-            }
+            },
+            center: map.getCenter()
         };
-        searchManager.geocode(requestOptions);
-    });
 
-    Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
-        var searchManager = new Microsoft.Maps.Search.SearchManager(map);
+        // console.log(requestOptions)
+
+        searchManager.geocode(requestOptions);
+        // console.log(map._options.center.latitude)
+
         var reverseGeocodeRequestOptions = {
-            location: new Microsoft.Maps.Location(47.640049, -122.129797),
+            location: new Microsoft.Maps.Location(map._options.center.latitude,map._options.center.longitude),
             callback: function (answer, userData) {
                 map.setView({ bounds: answer.bestView });
                 map.entities.push(new Microsoft.Maps.Pushpin(reverseGeocodeRequestOptions.location));
@@ -81,6 +84,7 @@ function loadMapScenario(_result) {
                     answer.address.formattedAddress;
             }
         };
+        console.log(reverseGeocodeRequestOptions.location)
         searchManager.reverseGeocode(reverseGeocodeRequestOptions);
     });
     
