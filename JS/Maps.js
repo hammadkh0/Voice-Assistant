@@ -34,7 +34,6 @@ recognition.onresult = function(event){
         console.log(r.innerHTML)
         var msg = new SpeechSynthesisUtterance("hello")
     }
-
 }
 
 recognition.onspeechend = function() {

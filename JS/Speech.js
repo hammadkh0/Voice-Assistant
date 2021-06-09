@@ -16,9 +16,9 @@ recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
 const mic = document.querySelector('.mic')
-const nav = document.querySelector('#g6')
+const navigation = document.querySelector('#g6')
 
-nav.onclick = function(){
+navigation.onclick = function(){
     window.location.href = "navigation.html"
 }
 
@@ -41,7 +41,6 @@ recognition.onresult = function(event){
         else if(voice === e){
             window.location.href = `${voice}.html`;
         }
-        
     });
 }
 
