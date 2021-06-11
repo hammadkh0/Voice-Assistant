@@ -57,7 +57,7 @@ function loadMapScenario(_result) {
         zoom: 8,
         showSearchBar: true,
     });
-    console.log(map._options.center.latitude)
+    // console.log(map._options.center.latitude)
     Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
         var searchManager = new Microsoft.Maps.Search.SearchManager(map);
         var requestOptions = {
